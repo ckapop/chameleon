@@ -47,7 +47,7 @@ class ChameleonTemplate extends BaseTemplate {
 		// The headelement defines the <body> tag itself, it shouldn't be included in the html text
 		// To add attributes or classes to the body tag use OutputPageBodyAttributes hook
 		$this->html( 'headelement' );
-		echo $this->getSkin()->getComponentFactory()->getRootComponent()->getHtml();
+		echo $this->getSkin()->getComponentFactory()->getRootComponent()->getHtml($this);
 		$this->printTrail();
 		echo "</body>\n</html>";
 	}

@@ -52,7 +52,10 @@ class PersonalTools extends Component {
 	 * @throws \FatalError
 	 * @throws \MWException
 	 */
-	public function getHtml() {
+	public function getHtml($tpl = null) {
+        if ( !is_null( $tpl ) ) {
+            $this->setSkinTemplate( $tpl );
+        }
 		// start personal tools element
 		$echoHtml = '';
 		if ( $this->getShowEcho() === self::SHOW_ECHO_ICONS ) {
